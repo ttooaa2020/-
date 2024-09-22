@@ -1,0 +1,114 @@
+@charset 'utf-8';
+
+.inner {
+    /* w1340+m0-a+bg#ff5 */
+    width: 1340px;
+    margin: 0 auto;
+    background: #ff5;
+
+    height: 100%; /* h100p */ /* 퍼센트는 부모 기준으로  */
+}
+
+header {
+    height: 100px;
+    background: red;
+}
+header nav {
+    display: flex; /* 정렬 값을 줄수 있는거 */
+    justify-content: space-between; /* jcsb: 여백 균등 분배 */
+    align-items: center; /* aic: 가로 중앙 센터 정렬 */
+    height: 100%;
+}
+
+.logo {
+    /* w190+h44+bd */
+    width: 190px;
+    height: 44px;
+    border: 1px solid #000;
+}
+.gnb {
+    display: flex;
+    align-self: flex-end; /* as: 너만 세로로 기준으로 바닥으로 (플렉스의 아이템에게 주는 명령) */
+}
+.gnb > li {
+    position: relative; /* pdsr: 직계 자손 절대배치의 기준점 */
+}
+.gnb > li > a {
+    display: block; /* db: 인라인을 블록화하는것 */
+    /* 영역을 만들어서 사용자가 누를수 있는 영역을 넓혀야함 그래서 a에게 영역 값을 줘야함 */
+    width: 170px;
+    padding: 12px 0;
+    border: 1px solid #000;
+    text-align: center; /* tac: 텍스트 중앙으로 */
+}
+
+.gnb_bg {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background: pink;
+    z-index: 9;
+}
+
+.submeun {
+    /* display: none; */ /*  해당 요소를 화면에 표시하지 않도록 하는것 */
+    background: blue;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 100%; /* li의 크기 만큼 100% */
+    z-index: 10;
+}
+
+.submeun li a {
+    display: block; /* 클릭할 수 있는 공간 확보 */
+    padding: 10px;
+    text-align: center;
+}
+
+.visual {
+    height: 350px;
+    background: skyblue;
+    position: relative;
+}
+
+.link {
+    height: 80px;
+    /* background: orange; */
+
+    /* 위로 올려서 겹쳐놓기 위한 방법 */
+
+    /* position: absolute;
+    top: 370px;
+    left: 0;
+    width: 100%; */
+
+    /* transform: translateY(-100); trfty */
+
+    margin-top: -80px; /* 이게 가장 좋은 방법 */
+    position: relative; /* 이걸 줘도 z인덱스를 줄수 있다. 위치의 변경 없이 z값을 줄 수 있음 */
+    z-index: 10;
+}
+
+.link .inner {
+    background: #fff;
+    border-radius: 20px 20px 0 0; /* bdrs*/
+}
+
+.banner {
+    height: 200px;
+    background: tomato;
+}
+
+.board {
+    /* mih350 */
+    min-height: 350px; /* 자식한테 세로값 상속 안됨 */
+    background: green;
+}
+
+footer {
+    height: 100px;
+    background: black;
+}

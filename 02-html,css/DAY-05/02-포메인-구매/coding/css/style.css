@@ -1,0 +1,62 @@
+@charset 'uft-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+    font: 16px/1.6 Pretendard, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #b9b9b9;
+    font-size: 15px;
+}
+
+.process {
+    width: 1080px;
+    height: 593px;
+    margin: 0 auto;
+}
+.process h1 {
+    text-align: center;
+    margin: 77px;
+    font-size: 38px;
+}
+
+.mileage-list {
+    background: green;
+    gap: 60px 29px;
+    display: flex;
+    gap: 40px;
+}
+
+.mileage-list li {
+    margin-top: 87px;
+    width: 240px;
+    height: 240px;
+    background: #fff;
+
+    position: relative;
+}
+
+.mileage-list ol {
+    width: 240px;
+}
+
+.mileage-list li ol {
+}

@@ -1,0 +1,70 @@
+@charset 'utf-8';
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+    --main-color: #bc955c;
+    --point-color: #ffa727;
+    --main-darck: #1d1d1b;
+    --text-color: #bbbbbb;
+    --darck-100: #000;
+    --darck-60: #666666;
+    --darck-30: #bbbbbb;
+}
+
+::selection {
+    background: var(--point-color);
+    color: #fff;
+}
+
+html {
+    font-size: 100%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 2rem/1.5 Pretendard, sans-serif;
+    color: var(--text-color);
+    text-transform: capitalize;
+    word-break: keep-all;
+    overflow-x: hidden;
+    min-width: 36rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--point-color);
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hidden {
+    position: absolute;
+    margin: -1px;
+    width: -1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.inner {
+    width: 142rem;
+    margin: 0 auto;
+    /* background: #ff5; */
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

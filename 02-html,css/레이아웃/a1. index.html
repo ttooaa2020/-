@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>레이아웃 1</title>
+        <link rel="stylesheet" href="./reset.css" />
+        <style>
+            header {
+                /* w1200+h100+m0-a+bg */ /* m0-a  가운데 정렬*/
+                width: 1200px;
+                height: 100px;
+                margin: 0 auto;
+                background: red;
+            }
+
+            footer {
+                width: 1200px;
+                height: 100px;
+                margin: 0 auto;
+                background: #000;
+            }
+
+            .slider {
+                width: 1200px;
+                min-height: 300px; /* mih300 : 최소한의 값을 가지고 늘어날수 있게 하는것*/
+                margin: 0 auto;
+                background: orange;
+            }
+            .contents {
+                width: 1200px;
+                min-height: 200px; /* mih200 */
+                margin: 0 auto;
+                background: yellow;
+
+                display: flex; /* df */
+            }
+
+            .board {
+                width: 34%; /* w34p: 3가지로 나눈값 / 2=50%*/
+                background: green;
+            }
+            .banner {
+                width: 33%;
+                background: blue;
+            }
+            .link {
+                width: 33%;
+                background: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- header+main+footer -->
+        <!-- 레아웃일때는 이 세가지 태그를 정석적으로 사용 -->
+        <header></header>
+        <main>
+            <!-- .slider+.contents -->
+            <div class="slider"></div>
+            <div class="contents">
+                <!-- .board+.banner+.link -->
+                <div class="board">board</div>
+                <div class="banner">banner</div>
+                <div class="link">link</div>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
+</html>
+<!-- 태그 앞에 점 붙이는거 알아내기,df 왜하는지 알아보기,css 관련 알아보기,디비컷 1시간=신한금융꺼 한번 보기-->

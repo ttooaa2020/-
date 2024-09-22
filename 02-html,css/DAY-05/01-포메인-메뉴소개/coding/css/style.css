@@ -1,0 +1,191 @@
+@charset 'utf-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+ol,
+li {
+    list-style: none; /* list */
+}
+
+img {
+    vertical-align: top; /* vat */
+}
+
+body {
+    font: 16px/1.6 Pretendard, sans-serif;
+}
+
+a {
+    text-decoration: none; /* tda */
+    color: inherit; /* c */
+}
+
+a:hover {
+    text-decoration: none;
+    color: #546220;
+}
+
+.menu {
+    /* w1078+m0+bg#ff5 */
+    width: 1078px;
+    margin: 0 auto;
+    background: #ff5;
+}
+
+.menu h1 {
+    display: none; /* dn */
+}
+
+.menu-list {
+    background: green;
+    display: flex; /* df */
+    flex-wrap: wrap; /* fxww */
+    gap: 60px 29px; /* g60-29 */
+}
+.menu-list li {
+    /* border: 1px solid #000; bd */
+    /* w340+h410+bg#fff */
+
+    width: 340px;
+    height: 410px;
+    background: #fff;
+
+    position: relative; /*  직계자손 절대 배치의 기준점 */
+}
+
+.badge {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: no-repeat 50%;
+
+    position: absolute; /* posa */
+    top: 20px;
+    left: 21px;
+
+    color: transparent;
+}
+.badge-best {
+    background-image: url(../images/ico_menu_best.png);
+}
+.badge-hot {
+    background-image: url(../images/ico_menu_hot.png);
+}
+.badge-new {
+    background-image: url(../images/ico_menu_new.png);
+}
+.menu-con {
+    text-align: center; /* tac */
+    padding-top: 15px; /* pt15 */
+}
+
+.menu-con strong {
+    font-weight: 600; /* fw600 */
+    font-size: 20px; /* fz20 */
+    color: #000;
+}
+.menu-con p {
+    font-size: 14px;
+    color: #999;
+}
+
+/* 상세정보 */
+.detail-info {
+    background: rgba(45, 104, 11, 0.7); /* c한후 rgba */
+
+    position: absolute; /* posa */
+
+    top: 0;
+    left: 0;
+    width: 100%; /* w100p: 절대배치된 요소는 가로크기가 쪼그라든다. 재설정이 필요함. */
+    height: 340px;
+
+    text-align: center; /* tac: 블록요소가 감싸고 잇는 인라인 요소를 가운데로 */
+
+    /* p70-22-58 */
+    padding: 70px 22px 58px; /* 순서대로 위,좌우,아래 */
+
+    opacity: 0;
+}
+.detail-info dl dt {
+    /* fw700+fz22+c#fff */
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+}
+
+.detail-info dl dt + dt {
+    /* 인접배치: dt에 감싸져 있어서 +로 추가 하기만 해도 됨 */
+
+    /* fw500+fz16+c#e9b863 */
+    font-weight: 500; /* fw500 */
+    font-size: 16px;
+    color: #e9b863;
+    margin-top: 10px;
+}
+
+.detail-info dl dd {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
+}
+
+.detail-info .more::before {
+    content: ""; /* ct */
+    display: block; /* db */
+
+    /* w100p+h1+bg#fff */
+    width: 100%;
+    height: 1px;
+    background: #fff;
+
+    /* posa+t50p+l50p */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%); /* trft */
+}
+
+.detail-info .more::after {
+    content: ""; /* ct */
+    display: block;
+
+    width: 1px;
+    height: 100%;
+
+    /* posa+t50p+l50p */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(90deg);
+
+    background: #fff;
+}
+
+/* hover effect */
+.menu-list li:hover .detail-info {
+    opacity: 1;
+    transition: 0.4s; /* trs.4s */
+}
+
+.detail-info .more {
+    display: block; /* db */
+
+    /* w38+h38+bg */
+    width: 38px;
+    height: 38px;
+    /* background: #000; */
+    margin: 20px auto 0; /* 크기가 있는 블록은 마진으로 */
+    position: relative; /* posr */
+}
+
+.menu-list li:hover .detail-info .more::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: 0.4s 0.4s; /* 맨끝에 들어가는 초는 딜레이 */
+}

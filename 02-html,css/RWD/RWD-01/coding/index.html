@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>반응형 웹 첫번째</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/styel.css" />
+    </head>
+    <body>
+        <header>
+            <!-- .inner>nav>h1.logo+ul.gnb+.util-menu -->
+            <div class="inner">
+                <nav>
+                    <h1 class="logo">
+                        <a href="#"><i class="hidden">LOGO</i></a>
+                    </h1>
+
+                    <ul class="gnb">
+                        <!-- li*3>a{MENU$} -->
+                        <li><a href="#">MENU1</a></li>
+                        <li><a href="#">MENU2</a></li>
+                        <li><a href="#">MENU3</a></li>
+                    </ul>
+
+                    <div class="util-menu">
+                        <a href="#" class="btn-menu"><i class="hidden">menu</i></a>
+                        <a href="#" class="btn-login">sign in</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <hr />
+        <!-- hr: 구분선을 보여줌 -->
+
+        <main>
+            <!-- s.visual -->
+            <section class="visual">
+                <!-- .visual-title>h2+p -->
+                <div class="visual-title">
+                    <h2>Our Mission</h2>
+                    <p>Lorem Ipsum is simply dummy text</p>
+                </div>
+            </section>
+            <!-- //e.visual -->
+
+            <!-- s.about -->
+            <section class="about">
+                <!-- .inner>h3.sec-title+p -->
+                <div class="inner">
+                    <h3 class="sec-title">About</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                        since the 1500s, when an unknown.
+                    </p>
+                </div>
+            </section>
+            <!-- //e.about -->
+
+            <!-- s.team -->
+            <section class="team">
+                <div class="inner">
+                    <h3 class="sec-title">Team</h3>
+
+                    <!-- ul.team-list>li*3>(figure>img)+dl>dt+dd -->
+                    <ul class="team-list">
+                        <li>
+                            <figure>
+                                <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVsLlJiSW3Bo236qQVBgyJRJXMiLtYZss3BgqXXz-aHG3wEh30Lerjj1CPUp-saruWnoY&usqp=CAU"
+                                    alt="John Doe"
+                                />
+                            </figure>
+                            <dl>
+                                <dt>John Doe</dt>
+                                <dd>Founder & CEO</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <figure>
+                                <img
+                                    src="https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/395/7a0291ad83dbed9162283283e0424308_res.jpeg"
+                                    alt="John Doe"
+                                />
+                            </figure>
+                            <dl>
+                                <dt>John Doe</dt>
+                                <dd>Co- Founder</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="https://i.pinimg.com/236x/67/51/77/6751775fe961a6541dc7edcbc48006d4.jpg" alt="John Doe" />
+                            </figure>
+                            <dl>
+                                <dt>John Doe</dt>
+                                <dd>Investor</dd>
+                            </dl>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="work-with">work with us</a>
+                </div>
+            </section>
+            <!-- //e.team -->
+
+            <!-- s.map -->
+            <section class="map">
+                <h4 class="hidden">map</h4>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.5648735303316!2d126.98588629919733!3d37.5725068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca358d397376d%3A0x655d2f997228fdf1!2z7ZWY7J2066-465SU7Ja0IOy7tO2TqO2EsO2VmeybkA!5e0!3m2!1sko!2skr!4v1725937463966!5m2!1sko!2skr"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <!-- 지도에서 공유하기 한뒤 지도 퍼가기 하면 html 코드 줌 -->
+            </section>
+            <!-- //e.map -->
+        </main>
+        <hr />
+
+        <footer>
+            <div class="inner">
+                <!-- p.copyright+ul.sns-list>li*3>a>i.hidden -->
+                <p class="copyright">© Company.LLC 2019</p>
+                <ul class="sns-list">
+                    <li>
+                        <a href="#"><i class="hidden">E-mail</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="hidden">facebook</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="hidden">twitter</i></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

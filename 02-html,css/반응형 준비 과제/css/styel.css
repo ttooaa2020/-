@@ -1,0 +1,353 @@
+@charset 'utf-8';
+
+.inner {
+    width: 118rem;
+    margin: 0 auto;
+    /* background: rgba(255, 0, 0, 0.3); */
+}
+
+#header {
+    background: var(--darck-30);
+}
+
+#header nav {
+    width: 118rem;
+    min-height: 9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    display: block;
+    width: 4rem;
+    height: 4.8rem;
+    background: url(../img/apple-logo.svg) no-repeat 50% / cover;
+}
+
+.gnb {
+    display: flex;
+    margin-left: auto;
+    margin-right: 4rem;
+}
+
+.gnb li a {
+    display: block;
+    padding: 1rem 2rem;
+
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.btn-key {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #000;
+    border-radius: 100%;
+    background: url(../img/key-btn.svg) no-repeat 50%;
+}
+
+.visual {
+    height: 54.4rem;
+    margin: 0 auto;
+    background: var(--darck-30);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.visual-title {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.visual-title h2 {
+    font-weight: 700;
+    font-size: 7.6rem;
+}
+
+.visual-title p {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.cta {
+    margin-top: 2.8rem;
+    width: 21.4rem;
+    height: 5.4rem;
+    border-radius: 30px;
+    border: 1px solid var(--text-color);
+
+    font-weight: 700;
+    font-size: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us {
+    text-align: center;
+    padding: 8rem 0 11.7rem;
+}
+
+.about-title {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.about-con figure {
+    padding: 4.3rem 0 2.8rem;
+    margin: 0 auto;
+    width: 88rem;
+    height: 32rem;
+}
+
+.about-con img {
+    width: 100%;
+    height: 100%;
+}
+
+.about-con p {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.team {
+    color: var(--text-color);
+}
+
+.team-title {
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.team {
+    background: var(--darck-30);
+    padding: 8.3rem 12rem;
+}
+
+.team-list {
+    display: flex;
+    width: 118rem;
+    justify-content: center;
+    gap: 6rem;
+
+    margin-top: 4rem;
+}
+
+.team-list li {
+    width: 28rem;
+    min-height: 33.1rem;
+    text-align: center;
+}
+
+.team-list li figure {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.team-list li figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-list li dl {
+    margin-top: 2rem;
+}
+
+.team-list li dl dt {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.team-list li dl dd {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.work-with {
+    width: 21.1rem;
+    height: 5.4rem;
+    border: 1px solid #000;
+    border-radius: 30px;
+
+    font-weight: 700;
+    font-size: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 9rem auto 0;
+}
+
+.work {
+    padding: 8rem 0 12rem;
+}
+
+.work-main {
+    display: flex;
+    min-height: 50.4rem;
+    margin-top: 4.3rem;
+}
+
+.work-title {
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.best {
+    /* border: 1px solid #000; */
+    width: 48rem;
+    text-align-last: left;
+}
+
+.best figure {
+    width: 48rem;
+    height: 32rem;
+}
+
+.best img {
+    width: 100%;
+    height: 100%;
+}
+
+.best dl {
+    margin-top: 2.8rem;
+    color: var(--text-color);
+}
+
+.best dl dt {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.best dl dd {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.work-con {
+    width: 68rem;
+
+    margin-left: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work-con figure {
+    width: 33rem;
+    height: 24.2rem;
+}
+
+.work-con img {
+    width: 100%;
+    height: 100%;
+}
+
+.e-mail form {
+    display: flex;
+
+    width: 48.8rem;
+    height: 5.4rem;
+
+    margin: 0 auto;
+    margin-top: 5.2rem;
+}
+
+.e-mail input {
+    display: block;
+
+    width: 48.8rem;
+    height: 5.4rem;
+    position: absolute;
+
+    padding-left: 2.4rem;
+    border-radius: 3rem;
+    margin: 0 auto;
+
+    font-weight: 500;
+    font-size: 1.8rem;
+
+    border: 1px solid var(--darck-30);
+    color: var(--text-color);
+}
+
+.e-mail button {
+    display: block;
+
+    position: relative;
+    width: 21.4rem;
+    height: 5.8rem;
+
+    left: 65%;
+
+    background: var(--darck-30);
+    border-radius: 3rem;
+
+    font-weight: 700;
+    font-size: 2rem;
+
+    color: var(--text-color);
+
+    z-index: 1;
+}
+
+.map iframe {
+    height: 68rem;
+    width: 100%;
+}
+
+footer {
+    padding: 5.6rem 0;
+    background: var(--darck-30);
+}
+
+footer .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-con {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.sns-list {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.sns-list li a {
+    display: block;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.sns-list li:nth-last-child(1) a {
+    background: url(../img/sns-1.svg) no-repeat 50%;
+}
+.sns-list li:nth-last-child(2) a {
+    background: url(../img/sns-2.svg) no-repeat 50%;
+}
+.sns-list li:nth-last-child(3) a {
+    background: url(../img/sns-3.svg) no-repeat 50%;
+}

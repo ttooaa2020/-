@@ -1,0 +1,49 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+:root {
+    /* 다양한 변수를 선언 :피그마 라이브러리 같은 느낌*/
+    --main-color: #13289f;
+    --title-color: #333;
+    --text-color: #666;
+    --iine-color: rgba(0, 0, 0, 0.2);
+    --basic-transition: all ease-out 0.4s;
+    --white10: rgba(255, 255, 255, 0.1);
+    --white50: rgba(255, 255, 255, 0.5);
+    --white100: rgba(255, 255, 255, 1);
+    --gray-light: #e5e5e5;
+    --gray-dack: #1f1f1f;
+
+    font-size: 100%; /* fz100p= 16px */
+}
+
+body {
+    font: 400 1rem/1.6 "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none; /* tdn: 링크 밑줄 없게 해주는거 */
+    color: inherit;
+}
+
+a :hover {
+    text-decoration: none; /* tdn: 밑줄 생기게 */
+    color: var(--main-color); /* #133984 */
+}
+
+/* 히든 명령 */
+.hidden {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+/*  */
+
+button {
+    cursor: pointer; /* cup: a속성 넣어주는것 */
+}

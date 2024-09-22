@@ -1,0 +1,168 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* 초기화 */
+
+* {
+    /* m0+p0+bxbb */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none; /* lisn */
+}
+
+img {
+    vertical-align: top; /* vat */
+}
+
+body {
+    font: 16px/1.6 "Noto Sans KR", sans-serif; /* f (크기 줄 간격 160%, 폰트 이름 후 콤마 꼭 찍기) */
+    color: #a4a4a4; /* c */
+}
+
+a {
+    text-decoration: auto; /* tda: 링크 없애기 */
+    color: inherit; /* 색상강제 삽입 */
+}
+
+a:hover {
+    /* a를 호버 할때 */
+    text-decoration: none;
+    color: #546220;
+}
+
+/* 디자인 영역시작 ,정렬할떄 부모 태그에 주기*/
+
+.process {
+    /* 전체적 영역 */
+    /* w1080+m0-a+bg#ff5 */
+    width: 1080px;
+    margin: 0 auto;
+    /* background: #ff5; */
+
+    padding: 70px 0; /* p70-0: 위 -아래 */
+}
+.process h1 {
+    /* fz34+c#546220 */
+    font-size: 34px;
+    color: #546220;
+
+    font-weight: 500; /* fw500 (500은 레귤러,h-들의 볼드 값을 얇게 만듦)*/
+    text-align: center; /* tac: 블록요소가 감싸고 있는 인라인을 가운데로 */
+}
+.process strong {
+    font-weight: 400; /* fw400 */
+}
+
+/* 요소들 효과 */
+.process-list {
+    /* bg#5f5 */
+    /* background: #5f5; */
+    display: flex; /* df:메인축 방햫으로 부터 정렬 */
+    justify-content: space-between; /* jcsb: 여백을 가지고 똑같은 간격으로 정렬 배치 */
+    margin-top: 77px; /* mt77 */
+}
+
+.process-list li {
+    /* bd */
+    border: 1px solid #000;
+    width: 240px;
+    height: 240px;
+
+    /* 안에 요소 패딩을 따로따로 하지 말것 합쳐서 생각하기 */
+    padding: 28px;
+
+    position: relative; /* posr:직계자손의 절대배치의 기준점 */
+    display: flex; /* df:컴퍼넌트 같은 역할*/
+    flex-direction: column; /* fxdc: 메인축의 방향을 세로로 변경 */
+    align-items: center; /* aic:가로로 센터로 정렬 */
+    justify-content: center; /* jcc: 세로로 센터 정렬 */
+    gap: 12px; /* g12: 요소 간격을 갭으로 줌 */
+}
+
+.process-list li p {
+    min-height: 52px; /* mih52: 52px만큼의 크기를 준것 */
+    text-align: center; /* tac:텍스트 중앙으로  */
+}
+
+/* 가상 요소, 글에 위치에 따라 (여기는 li뒤에 넣어야 하니까.)*/
+
+.process-list li::before {
+    content: ""; /* ct */
+    display: block; /* db */
+    width: 116px;
+    height: 116px;
+    background: /* #000 */ no-repeat 50%; /* bg:공통 영역 (이미지를 불러 오기 위한 작업)  */
+}
+
+.process-list li:nth-child(1)::before {
+    /* 첫번째 자식인 li에 가상요소 before*/
+    background-image: url(../images/mileag_procedure_01.png); /* bgi: 백그라운드에 이미지를 불러오는 */
+}
+.process-list li:nth-child(2)::before {
+    background-image: url(../images/mileag_procedure_02.png);
+}
+.process-list li:nth-child(3)::before {
+    background-image: url(../images/mileag_procedure_03.png);
+}
+.process-list li:nth-child(4)::before {
+    background-image: url(../images/mileag_procedure_04.png);
+}
+
+.process-list li::after {
+    content: ""; /* ct 무조곤!*/
+    display: block; /* db */
+
+    /* w48+h28+bg */
+    width: 48px;
+    height: 28px;
+    background: /* red */ url(../images/ico_arrow_03.png) no-repeat 0 00;
+
+    position: absolute;
+    /* t50p+r0 상단 50,오른쪽으로 딱붙게 */
+    top: 50%;
+    right: -29px;
+    transform: translateY(
+        -50%
+    ); /* trfty: y축 (세로)으로 자신의 세로 크기의 절반 만큼 이동 */
+
+    transition: 0.4s; /* trs.4s */
+    /* 트랜지션을 미리 준비하면 마우스가 나가고 들어 올때 동시에 부드럽게 적용*/
+}
+
+.process-list li:last-child::after {
+    display: none; /* dn: 밖으로 나가진걸 없앤다 */
+}
+
+.apply {
+    /* w247+h70+bg#333+fz18+c#fff */
+    width: 247px;
+    height: 70px;
+    background: #333;
+    font-size: 18px;
+    color: #fff;
+
+    display: flex; /* 블록이 되도록 해줌, 크기와 여백을 줄수 있는 */
+    justify-content: center; /* 세로의 중앙 */
+    align-items: center; /* 가로의 중앙*/
+    margin: 50px auto; /* m50-a */
+}
+
+.apply:hover {
+    background: #000;
+    color: #fff;
+}
+/* 헷갈리면 모 한테 찾아가서 부모 한테 준다 */
+
+.process-list li:hover::after {
+    right: -45px; /* 화살표에 호버 했을 때 효과,위에서 움직이는 걸 고정 했으니 가져와서 */
+}
+
+.process-list li:hover {
+    transform: translateY(-30px);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>레이아웃2</title>
+        <link rel="stylesheet" href="./reset.css" />
+    </head>
+    <style>
+        header {
+            height: 100px;
+            background: red;
+        }
+        footer {
+            height: 100px;
+            background: #555;
+        }
+
+        .inner {
+            /* w1200+m0-a+bg */
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            background: rgb(255, 255, 0, 0.5);
+        }
+
+        .slider {
+            width: 1200px;
+            min-height: 300px; /* mih300 : 최소한의 값을 가지고 늘어날수 있게 하는것*/
+            margin: 0 auto;
+            background: orange;
+        }
+        .contents {
+            width: 1200px;
+            min-height: 200px; /* mih200 */
+            margin: 0 auto;
+            background: yellow;
+
+            display: flex; /* df */
+        }
+
+        .board {
+            width: 34%; /* w34p: 3가지로 나눈값 / 2=50%*/
+            background: green;
+        }
+        .banner {
+            width: 33%;
+            background: blue;
+        }
+        .link {
+            width: 33%;
+            background: purple;
+        }
+    </style>
+    <body>
+        <!-- header+main+footer -->
+        <header><div class="inner">header</div></header>
+        <main>
+            <div class="inner">
+                <!-- .slider+.contents -->
+                <div class="slider"></div>
+                <div class="contents">
+                    <!-- .board+.banner+.link -->
+                    <div class="board">board</div>
+                    <div class="banner">banner</div>
+                    <div class="link">link</div>
+                </div>
+            </div>
+        </main>
+        <footer><div class="inner">footer</div></footer>
+    </body>
+</html>
+<!-- 컨트롤 쉬프트 a- 선택한걸 코드로 감싸주는걸 해줌 -->
+
+<!-- inner: 가두는 그리드 -->
+
+<!-- 포지션 웹솔르투- 중요 외우기 -->

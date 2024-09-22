@@ -1,0 +1,363 @@
+@charset 'utf-8';
+
+.inner {
+    /* w94r+m0-a+bg#ff5 */
+    width: 94rem;
+    margin: 0 auto;
+    /* background: #ff5; */
+}
+
+nav {
+    height: 8rem;
+    display: flex;
+    /* background: #5f5f; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    /* w3.4r+h5.2+bg */
+    display: block;
+    width: 4.3rem;
+    height: 5.2rem;
+    background: url(../img/apple-logo.png) no-repeat 50% / cover;
+}
+
+.gnb {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+.gnb li a {
+    display: block;
+    padding: 1rem 1.8rem;
+    /* border: 1px solid #000; */
+
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.util-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-menu {
+    display: none;
+}
+
+.btn-login {
+    /* w11.4r+h4r+bg+bdrs30 */
+    /* display: block; */
+    width: 11.4rem;
+    height: 4rem;
+    background: var(--main-color);
+    border-radius: 30px;
+    color: #fff;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase; /* ttu: 문자를 대문자로 변경해줌 */
+
+    /* 글자 중앙 배치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-login:hover {
+    background: var(--main-darck-color);
+    color: #fff;
+}
+
+.visual {
+    max-width: 144rem;
+    margin: 0 auto;
+    /* height: 60rem; */
+    aspect-ratio: 1/0.4166666666666667; /* (세로값 / 가로 기준값) 600/1440=0.4166666666666667 */
+
+    background: url(../img/main-pc.jpg) no-repeat 0 0 / cover fixed /* fixed: 이미지 고정(스크롤에서 고정 시키는거), 이 순서 고정해야함! */;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual-title {
+    color: #fff;
+    /* background: red; */
+    text-align: center; /* tac */
+}
+
+.visual-title h2 {
+    font-weight: 700;
+    font-size: 6rem;
+    font-size: clamp(3.5rem, 4.167vw, 6rem);
+    /* 글자. clamp(최소값, 추천값, 최대값) / 60/1440*100=4.167, vw: 기존 값 / 시안 넓이 * 100 */
+}
+.visual-title p {
+    font-weight: 600;
+    font-size: 3rem;
+    font-size: clamp(2.5rem, 2.083vw, 3rem);
+}
+/* 메인 */
+
+.about {
+    padding: 5.5rem 0 6rem;
+    text-align: center;
+}
+
+.about p {
+    padding: 0 5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.team {
+    background: var(--main-color);
+    color: #fff;
+    padding: 4.5rem 6.4rem;
+}
+
+.team .sec-title {
+    color: #fff;
+}
+
+.team-list {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+
+    margin-top: 9rem;
+
+    width: 59rem;
+    width: 62.766%;
+    margin: 9rem auto 0;
+}
+
+.team-list li {
+    width: 15rem;
+    width: 25.4237%;
+
+    min-height: 21rem; /* mih */
+    text-align: center;
+}
+
+.team-list li figure {
+    width: 100%;
+    aspect-ratio: 1/1; /* asr : 많이 쓰게 될 수도 있음 */
+    border-radius: 50%; /* bdrs : 둥글게 만드는거 */
+    overflow: hidden; /* 둥글게 만든 밖에 있는건 숨겨라 */
+}
+
+.team-list li figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ob: 비율 유자 하면서 꽉 채우기 */
+}
+
+.team-list li dl {
+    margin-top: 5rem;
+}
+.team-list li dl dt {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.team-list li dl dd {
+    font-size: 1.6rem;
+}
+
+.work-with {
+    /* w18r+h4r+bd+bdrs30 */
+    width: 18rem;
+    height: 4rem;
+    border: 1px solid #fff;
+    border-radius: 30px;
+
+    /* fw700+fz1.4r+ttu */
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase; /* ttu */
+
+    /* 버튼 디자인에서 텍스트를 정렬 시키는 가장 쉬운 코딩 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* m9r-a-0 */
+    margin: 9rem auto 0;
+
+    transition: 0.4s;
+}
+
+.work-with:hover {
+    /* border-width: 3px; bdw */
+    color: #fff;
+
+    /* bxsh */
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.map {
+    height: 60rem;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    filter: sepia(0.5);
+}
+
+footer {
+    padding: 4rem 0;
+    background: #45494d;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer .inner {
+    display: flex;
+    /* background: #5f5; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.sns-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sns-list li a {
+    display: block;
+    /* w4r+h4r+bd+bdrs50p+bg */
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: no-repeat 50% /60% auto;
+}
+
+.sns-list li:nth-child(1) a {
+    background: url(../img/foot-sns1.png);
+}
+.sns-list li:nth-child(2) a {
+    background: url(../img/foot-sns2.png);
+}
+.sns-list li:nth-child(3) a {
+    background: url(../img/foot-sns3.png);
+}
+
+/*inner 크기에 맞춘 분기 */
+@media screen and (max-width: 940px) {
+    .inner {
+        /* 타켓 / 디자인 시안 * 100/ 940/1440*100 */
+        width: 80%;
+    }
+
+    .team-list {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .inner {
+        /* 타켓 / 디자인 시안 * 100/ 940/1440*100 */
+        width: 85%;
+    }
+
+    .logo a {
+        width: 3.5rem;
+        height: 4.3rem;
+    }
+
+    nav {
+        height: 5.7rem;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .btn-menu {
+        display: block;
+        /* w4r+h4r+bd+bdrs30+bg */
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid #000;
+        border-radius: 30px;
+        background: url(../img/ico-menu.png) no-repeat 50% /50% auto;
+    }
+
+    .btn-login {
+        width: 4rem;
+
+        /* 글자 날리기 */
+        text-indent: -999px; /* ti-999 */
+        overflow: hidden;
+        background: var(--main-color) url(../img/ico-login.png) no-repeat 50% /60%;
+    }
+
+    .team-list {
+        width: 100%;
+    }
+
+    .team-list {
+        width: 19.2rem;
+        width: 50.5263%;
+        flex-direction: column; /* fxdc : 새로 정렬 */
+    }
+
+    .team-list li {
+        width: 100%;
+    }
+}
+
+/* 모바일 디자인 */
+
+@media screen and (max-width: 400px) {
+    .inner {
+        width: 38rem;
+        width: 95%;
+    }
+
+    .visual {
+        /* height: 27.6rem; */
+        aspect-ratio: 1/0.69;
+
+        background: url(../img/main-visual-mobile.jpg);
+        background-position: 50% 0 /* bgp */;
+    }
+
+    .visual-title {
+        width: 33.5rem;
+        width: 83.75%;
+    }
+
+    /* .visual-title h2 {
+        font-size: 3.5rem;
+    }
+
+    .visual-title p {
+        font-size: 2.5rem;
+    } */
+
+    .work-with {
+        height: 5.6rem;
+        width: 65.2632%;
+    }
+
+    .map {
+        height: 41.6rem;
+    }
+
+    footer .inner {
+        flex-direction: column; /* fxdc */
+        /* flex-direction: column-reverse; fxdcr : 세로로 요소의 순서를 바꿔줌
+        flex-direction: row-reverse; fxdrr : 가로로 요소의 순서를 바꿔줌 */
+        gap: 2.8rem;
+    }
+}
