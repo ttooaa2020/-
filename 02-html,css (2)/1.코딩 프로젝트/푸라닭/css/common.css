@@ -1,5 +1,76 @@
-@charset "utf-8";
+@charset 'utf-8';
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+    --main-color: #bc955c;
+    --point-color: #ffa727;
+    --main-darck: #1d1d1b;
+    --text-color: #bbbbbb;
+    --darck-100: #000;
+    --darck-60: #666666;
+    --darck-30: #bbbbbb;
+}
+
+::selection {
+    background: var(--point-color);
+    color: #fff;
+}
+
+html {
+    font-size: 100%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 2rem/1.5 Pretendard, sans-serif;
+    color: var(--text-color);
+    text-transform: capitalize;
+    word-break: keep-all;
+    overflow-x: hidden;
+    min-width: 36rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--point-color);
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hidden {
+    position: absolute;
+    margin: -1px;
+    width: -1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner {
+    width: 142rem;
+    margin: 0 auto;
+    width: 73.9583%;
+    /* background: #ff5; */
+}
+
+/* s.header */
 #header {
     background: #fff;
 }
@@ -7,7 +78,6 @@
 #header nav {
     display: flex;
     height: 13rem;
-    display: flex;
     /* background: #5f5f; */
     justify-content: space-between;
     align-items: center;
@@ -17,7 +87,7 @@
     display: block;
     width: 11.8rem;
     height: 4.6rem;
-    background: url(../coding/img/main_logo\ 1.png) no-repeat 50% / cover;
+    background: url(../img/main_logo\ 1.png) no-repeat 50% / cover;
 }
 
 .gnb {
@@ -42,12 +112,17 @@
     gap: 1rem;
 }
 
+.btn {
+    display: none;
+}
+
 .join {
-    width: 10rem;
-    height: 5.7rem;
+    padding: 1.5rem 2rem;
 
     font-weight: 600;
     font-size: 1.8rem;
+    font-size: clamp(1.4rem, 1.2676vw, 1.8rem);
+
     color: #fff;
     background: var(--darck-100);
     border-radius: 5rem;
@@ -58,11 +133,12 @@
 }
 
 .login {
-    width: 8.6rem;
-    height: 5.7rem;
+    padding: 1.5rem 2rem;
 
     font-weight: 600;
     font-size: 1.8rem;
+    font-size: clamp(1.4rem, 1.2676vw, 1.8rem);
+
     color: #fff;
     background: var(--darck-100);
     border-radius: 5rem;
@@ -73,114 +149,12 @@
 }
 /* e.header */
 
-/* s.visual */
-.visual {
-    width: 192rem;
-    height: 48.3rem;
-    margin: 0 auto;
-    position: relative;
-}
-
-.visual-img {
-    width: 192rem;
-    height: 48.3rem;
-
-    object-fit: cover;
-    object-position: 50% 50%;
-}
-
-.visual-img img {
-    width: 100%;
-    height: 100%;
-}
-
-.visual-title {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-title {
-    position: absolute;
-    top: 30%;
-    text-align: center;
-    color: #fff;
-    z-index: 1;
-}
-
-.visual-title h2 {
-    font-weight: 800;
-    font-size: 6rem;
-}
-
-.visual-title .main-p {
-    font-weight: 400;
-    font-size: 2.4rem;
-}
-
-.evidence {
-    position: absolute;
-    bottom: 3rem;
-    left: 148.4rem;
-    z-index: 1;
-}
-
-.evidence a {
-    font-weight: 600;
-    font-size: 1.6rem;
-}
-
-.visual::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #000;
-    opacity: 0.6;
-    pointer-events: none;
-    user-select: none;
-}
-/* e.visual */
-
-/* s. 인기 메뉴 */
-
-.best-meun {
-    background: var(--main-color);
-    min-height: 79.6rem;
-}
-
-.best-title {
-    padding: 7rem 0 5.9rem;
-
-    color: #fff;
-    font-weight: 800;
-    font-size: 4rem;
-
-    text-align: center;
-}
-
-.meun-list {
-    display: flex;
-    gap: 2rem;
-}
-
-.meun-list li {
-    width: 34rem;
-    height: 48.2rem;
-    background: #fff;
-}
-
-/* e. 인기 메뉴 */
-
 /* 고객센터 */
-
 .service {
     position: relative;
     padding: 8.4rem 0;
-    background: url(../coding/img/service-con.jpg) no-repeat 50%;
+    padding: 4.375% 0;
+    background: url(../img/service-con.jpg) no-repeat 50% / cover;
 }
 
 .sev-con {
@@ -191,6 +165,8 @@
 
 .service-btn {
     width: 15.1rem;
+    width: 10.6339%;
+
     height: 15.1rem;
     border-radius: 100%;
 
@@ -198,6 +174,7 @@
     color: #fff;
     font-weight: 700;
     font-size: 2.4rem;
+    font-size: clamp(1.5rem, 1.6901vw, 2.4rem);
 
     display: flex;
     align-items: center;
@@ -212,18 +189,21 @@
 .sev-con dl dt {
     font-weight: 400;
     font-size: 2.4rem;
+    font-size: clamp(1.3rem, 1.6901vw, 2.4rem);
 }
 
 .sev-con dl dd {
     font-weight: 700;
     font-size: 4.9rem;
+    font-size: clamp(2.1rem, 3.4507vw, 4.9rem);
 }
+/* 고객센터 */
 
 /* s. footer */
-
 #footer {
     background: var(--main-darck);
     padding: 9.1rem 0 15.4rem;
+    padding: 4.7396% 0 8.0208%;
 }
 
 .foot-nav {
@@ -232,15 +212,19 @@
 
 .foot-nav li {
     padding: 0 4.1rem 0 0;
+    padding: 0 2.8873% 0 0;
 
     color: #fff;
     font-weight: 700;
     font-size: 2rem;
+    font-size: clamp(1.2rem, 1.4084vw, 2rem);
 }
 
 .footer-con {
     display: flex;
     padding: 6.7rem 0 0;
+    padding: 4.7183% 0 0;
+
     justify-content: space-between;
 }
 
@@ -248,6 +232,7 @@ address {
     color: #fff;
     font-weight: 400;
     font-size: 1.8rem;
+    font-size: clamp(1.3rem, 1.2676vw, 1.8rem);
 }
 
 .in {
@@ -268,8 +253,10 @@ address {
 .foot-logo {
     display: block;
     width: 15rem;
+    width: 73.3529%;
+
     height: 6.3rem;
-    background: url(../coding/img/logo-icon-w.svg);
+    background: url(../img/logo-icon-w.svg) no-repeat 50% / contain;
 }
 
 .link-icon {
@@ -283,23 +270,24 @@ address {
     display: block;
     width: 4.6rem;
     height: 3.2rem;
-    background: url(../coding/img/youtube.svg);
+    background: url(../img/youtube.svg) no-repeat 50% / contain;
 }
 .link-icon li:nth-child(2) a {
     display: block;
     width: 3.3rem;
     height: 3.4rem;
-    background: url(../coding/img/insta.svg);
+    background: url(../img/insta.svg) no-repeat 50% / contain;
 }
 .link-icon li:nth-child(3) a {
     display: block;
     width: 3.2rem;
     height: 3.4rem;
-    background: url(../coding/img/feac.svg);
+    background: url(../img/feac.svg) no-repeat 50% / contain;
 }
 .link-icon li:nth-child(4) a {
     display: block;
     width: 3.6rem;
     height: 3.2rem;
-    background: url(../coding/img/blog.svg);
+    background: url(../img/blog.svg) no-repeat 50% / contain;
 }
+/* e. footer */

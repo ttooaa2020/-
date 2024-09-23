@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/* s.visual */
+.visual {
+    width: 192rem;
+    height: 48.3rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.visual-img {
+    width: 192rem;
+    height: 48.3rem;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.visual-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.visual-title {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.visual-title h2 {
+    font-weight: 800;
+    font-size: 6rem;
+}
+
+.visual-title .main-p {
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.evidence {
+    position: absolute;
+    bottom: 3rem;
+    left: 148.4rem;
+    z-index: 1;
+}
+
+.evidence a {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.6;
+    pointer-events: none;
+    user-select: none;
+}
+/* e.visual */
+
+/* s. 인기 메뉴 */
+
+.best-meun {
+    background: var(--main-color);
+    min-height: 79.6rem;
+}
+
+.best-title {
+    padding: 7rem 0 5.9rem;
+
+    color: #fff;
+    font-weight: 800;
+    font-size: 4rem;
+
+    text-align: center;
+}
+
+.meun-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.meun-list li {
+    width: 34rem;
+    height: 48.2rem;
+    background: #fff;
+}
+
+/* e. 인기 메뉴 */
