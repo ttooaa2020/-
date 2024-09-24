@@ -63,13 +63,6 @@ img {
     justify-content: space-between;
 }
 
-.inner {
-    width: 142rem;
-    margin: 0 auto;
-    width: 73.9583%;
-    /* background: #ff5; */
-}
-
 /* s.header */
 #header {
     background: #fff;
